@@ -1,0 +1,62 @@
+#side-bar{
+    background-color: #027bbc;
+}
+
+.nav-button {
+    background: #008DDA;
+    color: white;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    transition: background 0.3 ease, transform 0.3 ease;
+    display: block;
+}
+
+.nav-button:hover {
+    background: #0056a0;
+}
+
+.a-nav-button {
+    background: #008DDA;
+    color: white;
+    border: none;
+    width: auto;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3 ease, transform 0.3 ease;
+    display: block;
+}
+
+.a-nav-button:hover {
+    background: #0056a0;
+}
+
+.b-nav-button {
+    background: #008DDA;
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3 ease, transform 0.3 ease;
+    display: block;
+}
+
+.b-nav-button:hover {
+    background: #0056a0;
+}
+
+.sub-menu{
+    display: none;
+}
+
+.sub-menu .b-nav-button{
+    padding-left: 80px;
+}
