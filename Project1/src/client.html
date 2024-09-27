@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>Client Records</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your external stylesheet -->
+</head>
+<body>
+    <div class="header">
+        <h1 class="header-title">Client Records</h1>
+        <button class="btn-create" id="create-new-clientBtn" onclick="loadModal()">Create New Client</button>
+    </div>
+
+    <div class="module-content">
+        <div class="entries">
+            <span>Show <input type="int" value="0" class="entry-num"> Entries</span>
+        </div>
+
+        <div class="blue-bar">
+            <h1 class="module-title">Client Records</h1>
+            <div class="table-bg">
+                <table class="table-list-request">
+                    <thead class="column-title">
+                        <tr class="th-style">
+                            <th class="th-clientID">Client ID</th>
+                            <th class="th-client-name">Client Name</th>
+                            <th class="th-telephone">Telephone</th>
+                            <th class="th-phone">Phone</th>
+                            <th class="th-email">Email</th>
+                            <th class="th-location">Location</th>
+                            <th class="th-action">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="td-style">
+                        <tr>
+                            <td class="td-clientID">Client_01</td>
+                            <td class="td-client-name">SM Corporation</td>
+                            <td class="td-telephone">123-456-789</td>
+                            <td class="td-phone">0987654321</td>
+                            <td class="td-email">client@gmail.com</td>
+                            <td class="td-location">Antipolo, Rizal</td>
+                            <td class="td-action">
+                                <button class="edit-button" id="edit-client" onclick="parent.postMessage('openEditClient', '*')"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
+                                <button class="archive-button"><i class="btnArchive fa-solid fa-box-archive"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="pageBar">
+        <div class="pageContainer">
+            <p class="pageText">Showing
+                <a class="page1">1</a> to
+                <a class="page2">60</a> of
+                <a class="ent-total">69</a> entries
+            </p>
+            <div class="pageBtn">
+                <p class="btnPrev">Previous</p>
+                <a id="pageNum">1</a>
+                <a id="pageNum">2</a>
+                <a id="pageNum">3</a>
+                <a id="pageNum">4</a>
+                <a id="pageNum">5</a>
+                <p class="btnNext">Next</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadModal() {
+            console.log('Attempting to load modal...');
+            fetch('modal/create-client-modal.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.body.insertAdjacentHTML('beforeend', data);
+                    console.log('Modal loaded successfully!');
+                })
+                .catch(error => console.error('Error loading modal:', error));
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('create-client-modal');
+            if (modal) {
+                modal.remove(); // Remove the modal from the DOM
+            }
+        }
+
+        // Add event listener for form submission (this should go into your script.js)
+        document.addEventListener('submit', function (event) {
+            if (event.target.id === 'new-client-form') {
+                event.preventDefault(); // Prevent the default form submission
+                // Handle the form data as needed
+                console.log("New Client Data:", {
+                    name: document.getElementById('client-name').value,
+                    telephone: document.getElementById('telephone').value,
+                    phone: document.getElementById('phone').value,
+                    email: document.getElementById('email').value,
+                    location: document.getElementById('location').value
+                });
+
+                // Close the modal after submission
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
