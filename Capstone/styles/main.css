@@ -303,7 +303,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    margin-bottom: 20px;
     background-color: #f5f5f5;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.165);
 }
@@ -337,7 +336,6 @@ body {
     /*
     background-color: transparent;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.068);*/
-    margin-top: 15px;
     border-radius: 10px;
 }
 
@@ -472,7 +470,7 @@ body {
 }
 
 .button{
-        background-color: #4AC5EC;
+    background-color: #4AC5EC;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -481,8 +479,15 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
-    margin-left: 10px;
     cursor: pointer;
+}
+
+.button.green{
+    background-color: #45C983;
+}
+
+.button.green:hover{
+    background-color: #339460;
 }
 
 .btn-unlabeled-status {
@@ -593,7 +598,7 @@ body {
 
 .pageBtn {
     display: flex;
-    
+
     align-items: center;
     text-align: center;
 }
@@ -869,19 +874,68 @@ body {
     color: black;
 }
 
+
+
+
 /* NEW CLASS SELECTORS ADDED */
+
+
+.request-details-container{
+    box-shadow: 0px 4px 6px rgba(0, 0.5, 0, 0.144);
+}
 
 .request-details-header{
     background-color: #66B7E3;
-    margin-top: 15px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    padding: 10px;
+
 }
 
-.request-details-content{
-    background-color: white;
-    height: 200px;
+.request-details-header span{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
+
+.request-details-content{ 
+    background-color: white;
+    height: 150px;
+}
+
+.content-container{
+    display: flex;
+    gap: 100px;
+    padding: 20px 0px 20px 20px;
+}
+
+.label-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.label-style{
+    font-weight: bold;
+}
+
+.label-style.text{
+    color: #6B6B6B;
+}
+
+
+
+/* NEW CSS BUTTON ADDED */
+.button.green{
+    background-color: #45C983;
+}
+
+.button.green:hover{
+    background-color: #339460;
+}
+
+
+
 
 /***************************************************************
 *

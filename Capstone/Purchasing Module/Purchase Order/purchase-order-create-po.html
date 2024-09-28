@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Capstone/styles/main.css">
     <link rel="stylesheet" href="/Capstone/styles/tables.css">
-    <title>Requested Material Approve</title>
+    <title>Purchase Order Create PO</title>
 </head>
 
 <body class="body-iframe-padding">
-    
+
     <div class="header">
-        <h1 class="header-title">Purchasing > Requested Material > Approval</h1>
-        <button class="button receive-deliveries" id="" onclick="parent.postMessage('inventory-actionReceived','*')">Receive Deliveries</button>
+        <h1 class="header-title">Purchasing >  Purchase Order > Create PO</h1>
+        <button class="button receive-deliveries" id=""
+            onclick="parent.postMessage('inventory-actionReceived','*')">Receive Deliveries</button>
     </div>
 
     <div class="request-details-container">
@@ -39,7 +40,7 @@
                 </div>
             </div>
             <div class="content-container">
-                                <div class="label-container">
+                <div class="label-container">
                     <span class="label-style">Request ID:</span>
                     <span class="label-style text">Request_001</span>
                 </div>
@@ -85,32 +86,30 @@
             </tbody>
         </table>
     </div>
-</div>
+    </div>
 
-</div>
-<!-- PAGES -->
-<div class="pageBar">
-    <div class="pageContainer">
-        <p class="pageText">Showing
-            <a class="page1">1</a>
-            to
-            <a class="page2">60</a>
-            of
-            <a class="ent-total">69</a>
-            entries
-        </p> 
-        <div class="pageBtn">
-            <p class="btnPrev">&lt;</p> <!-- "<", hindi na yung word na "Previews" -->
-            <a class="pageNum active" id="pageNum">1</a>
-            <a id="pageNum">2</a>
-            <a id="pageNum">3</a>
-            <a id="pageNum">4</a>
-            <p class="btnNext">&gt;</p> <!-- ">", hindi na yung word na "Next" -->
+    </div>
+    <!-- PAGES -->
+    <div class="pageBar">
+        <div class="pageContainer">
+            <p class="pageText">Showing
+                <a class="page1">1</a>
+                to
+                <a class="page2">60</a>
+                of
+                <a class="ent-total">69</a>
+                entries
+            </p>
+            <div class="pageBtn">
+                <p class="btnPrev">&lt;</p> <!-- "<", hindi na yung word na "Previews" -->
+                <a class="pageNum active" id="pageNum">1</a>
+                <a id="pageNum">2</a>
+                <a id="pageNum">3</a>
+                <a id="pageNum">4</a>
+                <p class="btnNext">&gt;</p> <!-- ">", hindi na yung word na "Next" -->
+            </div>
         </div>
     </div>
-    </div>
-
-
 
 </body>
 
