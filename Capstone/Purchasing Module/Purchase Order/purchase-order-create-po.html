@@ -12,45 +12,65 @@
 <body class="body-iframe-padding">
 
     <div class="header">
-        <h1 class="header-title">Purchasing >  Purchase Order > Create PO</h1>
-        <button class="button receive-deliveries" id=""
-            onclick="parent.postMessage('inventory-actionReceived','*')">Receive Deliveries</button>
+        <h1 class="header-title">Purchasing > Purchase Order > Create PO</h1>
+        <div class="button-container">
+            <button class="button cancel-createPO">Cancel</button>
+            <button class="button save-createPO">Save and Confirm</button>
+        </div>
+    </div>
+    <div class="details-container">
+        <div class="request-details-container createPO">
+            <div class="request-details-header createPO">
+                <span class="padding">Purchase Order Details</span>
+            </div>
+            <div class="request-details-content createPO">
+                <div class="content-container createPO">
+                    <div class="label-container createPO">
+                        <span class="label-style">PO No:</span>
+                        <input class="input poNo disabled" type="text" placeholder="PO_001" disabled>
+                    </div>
+                    <div class="label-container">
+                        <span class="label-style">Date Requested:</span>
+                        <input class="input dateRequested disabled" type="date" disabled>
+                    </div>
+                </div>
+                <div class="label-container-bottom">
+                    <span class="label-style">Notes:</span>
+                    <textarea class="input notes" name="remarks" style="resize: none;"></textarea>
+                </div>
+            </div>
+        </div>
+
+            
+
+        <div class="request-details-container addPurchase">
+            <div class="request-details-header addPurchase">
+                <span class="padding">Material Details</span>
+            </div>
+            <div class="request-details-content addPurchase">
+                <div class="content-container addPurchase">
+                    <div class="label-container addPurchase">
+                        <span class="label-style">Select Supplier:</span>
+                        <input class="input supplier" type="text" placeholder="Suppler_1">
+                    </div>
+                </div>
+                <div class="label-container-bottom margin">
+                    <span class="label-style">Add Material:</span>
+                    <input class="input addMaterial" type="text" placeholder="Select Material">
+                </div>
+                <div class="label-container-bottom">
+                    <span class="label-style">Quantity:</span>
+                    <input class="input quantity" type="text" placeholder="0">
+                    <span class="label-style">Item Cost:</span>
+                    <input class="input itemCost disabled" type="text" placeholder="0" disabled>
+                    <button class="button addBtn">Add</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="request-details-container">
-        <div class="request-details-header">
-            <span class="padding">Request Details</span>
-        </div>
-        <div class="request-details-content">
-            <div class="content-container">
-                <div class="label-container">
-                    <span class="label-style">Request ID:</span>
-                    <span class="label-style text">Request_001</span>
-                </div>
-                <div class="label-container">
-                    <span class="label-style">Date Requested:</span>
-                    <span class="label-style text">MM/DD/YYYY</span>
-                </div>
-                <div class="label-container">
-                    <span class="label-style">Requested by:</span>
-                    <span class="label-style text">Bautista</span>
-                </div>
-                <div class="button-container">
-                    <button class="button green">Approve</button>
-                </div>
-            </div>
-            <div class="content-container">
-                <div class="label-container">
-                    <span class="label-style">Request ID:</span>
-                    <span class="label-style text">Request_001</span>
-                </div>
-                <div class="label-container">
-                    <span class="label-style">Date Requested:</span>
-                    <span class="label-style text">MM/DD/YYYY</span>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
     <div class="entries">
         <span>Show
             <input class="entry-num" type="int" value="0">
@@ -65,7 +85,7 @@
                     <th class="th-cat">Category</th>
                     <th class="th-mat-desc">Material Description</th>
                     <th class="th-unit">Unit</th>
-                    <th class="th-requested">Requested</th>
+                    <th class="th-quantity">Qty.</th>
                     <th class="th-total-released">Total Released</th>
                     <th class="th-bom-qty">BOM Qty.</th>
                     <th class="th-remaining-qty-to-release">Remaining Qty. to Release</th>
