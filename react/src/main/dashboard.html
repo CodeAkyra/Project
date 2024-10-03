@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Dashboard</title>
+</head>
+
+<body class="body-iframe-padding" onload="startTime()">
+    <span>Dashboard is currently being displayed</span>
+    <span>Last site deploy 9/26/2024 7:00AM</span>
+    <br>
+    <span id="clock"></span>
+
+    <!--
+    <a href="https://filasiadeploytest.pages.dev/login/login">Click here to summon site iFrame</a>
+    -->
+    <!-- What this for XD -->
+    <!-- HAHAHAHA wala lang. para makita yung latest site deploy inside localhost -->
+    <script>
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</body>
+
+</html>

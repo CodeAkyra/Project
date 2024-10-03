@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Supplier</title>
+
+    <link rel="stylesheet" href="../../styles/create-table.css">
+    <link rel="stylesheet" href="/src/styles/tables.css">
+    <link rel="stylesheet" href="../../styles/tables.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body class="body-iframe-padding">
+
+    <div class="header">
+        <h1 class="header-title">Supplier > Edit Supplier</h1>
+        <button class="btn-cancel" id="cancelSupplierBtn">Cancel</button>
+        <button class="btn-create">Save</button>
+    </div>
+
+    <div class="blue-bar">
+        <!-- FIRST PART -->
+        <h1 class="module-title">Edit Supplier Details</h1>
+        <div class="form-content">
+            <div class="inputs-top-row">
+                <div class="input-grp">
+                    <span class="input-label">Status:</span>
+                    <select class="input status">
+                        <option value="0">Active</option>
+                        <option value="1">In-active</option>
+                    </select>
+                </div>
+                <div class="input-grp">
+                    <span class="input-label">Supplier ID:</span>
+                    <input class="input supplierID" type="text" value="Supplier_01" disabled>
+                </div>
+
+                <div class="input-grp">
+                    <span class="input-label">Supplier Name:</span>
+                    <input class="input supplier-name" type="text" placeholder="Enter Supplier Name">
+                </div>
+
+                <div class="input-grp">
+                    <span class="input-label">Telephone:</span>
+                    <input class="input telephone" type="tel" placeholder="#">
+                </div>
+
+                <div class="input-grp">
+                    <span class="input-label">Phone:</span>
+                    <input class="input phone" type="tel" placeholder="#">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-content">
+            <div class="inputs-top-row">
+                <div class="input-grp">
+                    <span class="input-label">Email:</span>
+                    <input class="input email" type="email" placeholder="Enter Supplier Email">
+                </div>
+
+                <div class="input-grp">
+                    <span class="input-label">Location:</span>
+                    <input class="input location" type="tel" placeholder="Address">
+                </div>
+            </div>
+        </div>
+
+        <!-- LINE SEPARATOR -->
+        <hr class="line-separator">
+    </div>
+
+    <script>
+        // Cancel Button
+        document.getElementById('cancelSupplierBtn').addEventListener('click', function () {
+            parent.postMessage('cancel-SupplierBtn', '*');
+        });
+    </script>
+</body>
+
+</html>
