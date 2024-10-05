@@ -20,10 +20,6 @@
 .th-style th {
     padding: 10px;
 }
-.th-style {
-    border: 2px solid #F3F4F8;
-    text-align: center;
-}
 
 .td-style {
     border: 2px solid #F3F4F8;
@@ -35,7 +31,7 @@
     padding: 10px;
 }
 
-/* VIEW RECORDS AVAILABLE STOCK LEVEL */
+/* AVAILABLE STOCK LEVEL */
 
 .stock-level {
     color: white;
@@ -61,10 +57,6 @@
 }
 
 /* STATUS */
-.th-status {
-    
-}
-
 .status {
     font-weight: bold;
     color: rgb(51, 51, 51);
@@ -169,14 +161,6 @@
     cursor: pointer;
 }
 
-.td-action .check-button {
-    background-color: #5AE04E;
-}
-
-.td-action .x-button {
-    background-color: #E04E4E;
-}
-
 .td-action .delete-button {
     background-color: #ca221c;
 }
@@ -189,30 +173,14 @@
     background-color: #FFC107;
 }
 
-.td-images .image-button {
-    background-color: #1C96CA;
-}
-
-
 .btnEdit,
 .btnDelete,
 .btnReup,
 .btnView,
-.btnCheck,
-.btnX,
-.btnArchive,
-.btnImage {
+.btnArchive {
     cursor: pointer;
     color: white;
     font-size: 16px;
-}
-
-.td-style .check-button:hover {
-    background-color: #4bbb41;
-}
-
-.td-style .x-button:hover {
-    background-color: #be4242;
 }
 
 .td-style .edit-button:hover {

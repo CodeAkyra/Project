@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
-
 * {
-    /*
-    font-family: Arial, sans-serif;*/
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 .body-iframe-padding {
     padding: 20px;
-    height: max-content;
 }
 
 /*
@@ -19,8 +14,7 @@
 #contentIframe {
     border: none;
     width: 100%;
-    height: auto;
-    min-height: 500px;
+    height: 100%;
     background-color: #ffffff;
 
 }
@@ -140,13 +134,12 @@ body {
 
 .user-icon {
     border-radius: 100%;
-    margin-right: 10px;
+    margin-right: 20px;
     height: 50px;
 
     /* OPTIONAL RING */
     border: 2px solid rgb(19, 113, 221);
 }
-
 
 /***************************************************************
 *
@@ -166,11 +159,9 @@ body {
 */
 .sidebar-content {
     display: flex;
-    flex-direction: column;
     flex: 1;
-    overflow-y: auto;
+    overflow: hidden;
 }
-
 
 .sidebar {
     width: 220px;
@@ -223,16 +214,6 @@ body {
     font-size: 16px;
     transition: background 0.3 ease, transform 0.3 ease;
     position: relative;
-}
-
-.module-name.logout {
-    background-color: rgba(167, 0, 0, 0.63);
-    font-weight: bolder;
-}
-
-.module-name.logout:hover {
-    background-color: rgba(129, 0, 0, 0.644);
-    font-weight: bolder;
 }
 
 .module-name:active .arrow {
@@ -317,19 +298,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    margin-bottom: 20px;
-    /*
-    background-color: #f5f5f5;*/
-    background-color: transparent;
-    background-image: linear-gradient(to right, #66B7E3, #fff);
-
-    /**/
+    background-color: #f5f5f5;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.165);
 }
 
 .entries {
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 20px;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .entries span {
@@ -361,60 +337,15 @@ body {
     border-radius: 10px;
 }
 
-/* CREATE PURCHASE ORDER PROPERTIES */
-/* CREATE PURCHASE ORDER PROPERTIES */
-/* CREATE PURCHASE ORDER PROPERTIES */
-/* CREATE PURCHASE ORDER PROPERTIES */
-
-.blue-bar.windows {
-    display: flex;
-    flex-wrap: nowrap;
-
-}
-
-.blue-bar.windows>.window.purchase-order,
-.window.materials {
-    background-color: #fff;
-    width: 100%;
-    margin: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.window-title {
-    color: white !important;
-    background-color: #66B7E3;
-    margin-top: 0;
-    border-top-left-radius: 8px !important;
-    border-top-right-radius: 8px !important;
-}
-
-.input-grp.window {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 20px 20px 20px;
-}
-
-.input.remarks-po {
-    resize: none;
-    height: 100px;
-}
-
-/* END OF PO PROPERTIES */
-/* END OF PO PROPERTIES */
-/* END OF PO PROPERTIES */
-/* END OF PO PROPERTIES */
-
 .blue-bar h1 {
-    /*
     background-color: #66B7E3;
-    background-image: linear-gradient(to right, #66B7E3 , #fff);
-    
+    /*
     background-color: #004C76;*/
-    color: black;
+    color: white;
     font-size: 24px;
     padding: 15px;
     padding-left: 30px;
-    border-radius: 0px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -425,7 +356,10 @@ body {
     display: flex;
     align-items: center;
     background-color: #66B7E3;
-    border-radius: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     margin-bottom: 20px;
 }
 
@@ -497,16 +431,10 @@ body {
     font-size: 16px;
     font-weight: bold;
     border: none;
-    margin-right: 0px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
     margin-left: 10px;
-}
-
-.btn-qr i {
-    font-size: 20px;
-    padding: 0px 0px 0px 0px !important;
 }
 
 .btn-save-changes {
@@ -541,24 +469,6 @@ body {
 
 .btn-save-changes:hover {
     background-color: #2c8899;
-}
-
-.btn-save-changes:hover {
-    background-color: #2c8899;
-}
-
-.button {
-    background-color: #4AC5EC;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    margin-left: 10px;
-    cursor: pointer;
 }
 
 .btn-unlabeled-status {
@@ -606,21 +516,6 @@ body {
 
 }
 
-.btn-finish-receiving {
-    background-color: #7E4EE0;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    margin-left: auto;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
 .btn-return {
     background-color: #F26969;
     color: white;
@@ -655,11 +550,6 @@ body {
     cursor: pointer;
 }
 
-.btn-finish-receiving:hover {
-    background-color: #6b42be;
-    cursor: pointer;
-}
-
 /**************************
 *
 *  PLEASE CHECK TABLE.CSS
@@ -689,7 +579,7 @@ body {
 
 .pageBtn {
     display: flex;
-
+    
     align-items: center;
     text-align: center;
 }
@@ -718,7 +608,7 @@ body {
 
 /**
 * --------------------
-*    INPUTS
+*    CREATE REQUEST
 * --------------------
 */
 
@@ -727,13 +617,11 @@ body {
 }
 
 .input.reqID,
+.input.dateReq,
 .input.supp,
 /* <- EXCESS */
 .input.unit,
-.input.qtyAvail,
-.input.poNo,
-.input.dateReq,
-.input.itemCost {
+.input.qtyAvail {
     background-color: #b7b7b7;
 }
 
@@ -754,24 +642,15 @@ body {
     margin-bottom: 5px;
 }
 
-.input-label.value {
-    font-size: 18;
-    font-weight: normal;
-    margin-bottom: 5px;
-}
-
 .input {
     height: 30px;
     border: 1px solid;
     border-radius: 5px;
+
     text-align: center;
     font-weight: bold;
     font-size: 16px;
     height: 40px;
-}
-
-.input.poNo {
-    width: 100px;
 }
 
 .input.reqID {
@@ -786,39 +665,11 @@ body {
     width: 200px;
 }
 
-.input.project,
-.input.suppliers {
+.input.project {
     width: 500px;
 }
 
-/* CLIENT AND SUPPLIER BOOKMARK */
-.input.clientID,
-.input.supplierID {
-    width: 100px;
-}
-
-.input.client-name,
-.input.supplier-name {
-    width: 500px;
-}
-
-.input.telephone,
-.input.phone {
-    width: 200px;
-}
-
-.input.email {
-    width: 300px;
-}
-
-.input.location {
-    width: 600px;
-}
-
-/* DROPDOWN PROPERTIES */
-.status option,
-.project option,
-.suppliers option {
+.project option {
     background-color: rgba(0, 132, 255, 0.178);
 }
 
@@ -838,7 +689,9 @@ body {
     /* IMG PROPERTIES */
 }
 
-.btn-re-upload {}
+.btn-re-upload {
+
+}
 
 .btn-add-image {
     background-color: #4AC5EC;
@@ -879,7 +732,7 @@ body {
     flex-direction: column;
     margin-top: 20px;
     border-radius: 5px;
-
+    
 }
 
 .input-remark .remarks {
@@ -913,9 +766,9 @@ body {
     width: 500px;
 }
 
-.input.qty-received {
-    /* Deliveries */
-    border: 1px solid rgba(0, 0, 0, 0.308);
+.input.supp {
+    /* EXCESS */
+
 }
 
 .input.unit {
@@ -949,42 +802,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn-bom {
-    background-color: #4AC5EC;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    margin-left: auto;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.btn-approve {
-    background-color: #45C983;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.btn-bom:hover {
-    background-color: #3da4c4;
-}
-
-.btn-approve:hover {
-    background-color: #39a86d;
-}
-
 .btn-add:hover {
     background-color: #3da4c4;
     cursor: pointer;
@@ -994,20 +811,13 @@ body {
     background-color: #7fd1eb;
     border: none;
     border-radius: 5px;
-    padding: 12px;
+    padding: 10px;
     cursor: pointer;
     color: white;
     font-size: 15px;
     font-weight: bold;
-    margin-left: 10px;
-    margin-right: 0px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.view-image-button:hover {
-    background-color: #3da4c4;
-    cursor: pointer;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0.5, 0, 0.144);
 }
 
 /* MATERIAL ADDED TABLE */
@@ -1016,117 +826,6 @@ body {
     background-color: #FFF;
     color: black;
 }
-
-
-
-/* START OF CREATE PO */
-/* START OF CREATE PO */
-/* START OF CREATE PO */
-/* START OF CREATE PO */
-/* START OF CREATE PO */
-/* START OF CREATE PO */
-
-/* NEW CLASS SELECTORS ADDED */
-
-/* END OF CREATE PO */
-/* END OF CREATE PO */
-/* END OF CREATE PO */
-/* END OF CREATE PO */
-/* END OF CREATE PO */
-/* END OF CREATE PO */
-
-/* NEW CSS BUTTON / INPUTS ADDED */
-
-.button-container {
-    display: flex;
-    gap: 10px;
-}
-
-.button.cancel-createPO {
-    background-color: #F26969;
-}
-
-.button.cancel-createPO:hover {
-    background-color: #c45454;
-}
-
-.button.save-createPO:hover {
-    background-color: #3a99b6;
-}
-
-.button.green {
-    background-color: #45C983;
-}
-
-.button.green:hover {
-    background-color: #339460;
-}
-
-.button.addBtn:hover {
-    background-color: #3a99b6;
-}
-
-.input.notes {
-    width: 710px;
-    height: 100px;
-}
-
-.input.dateRequested {
-    width: 300px;
-}
-
-.input.supplier {
-    width: 300px;
-}
-
-.input.addMaterial {
-    width: 550px;
-}
-
-.input.quantity {
-    width: 100px;
-}
-
-.input.itemCost {
-    width: 100px;
-}
-
-.input.disabled {
-    background-color: rgb(238, 238, 238);
-}
-
-.radioInput {
-    display: none;
-}
-
-.radioInput:checked + .radioLabel {
-    background-color: rgb(0, 126, 175);;
-}
-
-.radioRoles {
-    display: inline-flex;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-}
-
-.radioRoles label {
-    padding: 8px 14px;
-    font-size: 16px;
-    color: #fff;
-    background-color: rgb(0, 166, 231);
-    cursor: pointer;
-    transition: background 0.1s;
-}
-
-.radioRoles label:not(:last-of-type) {
-    border-right: 1px solid rgb(0, 126, 175);
-}
-
-.disclaimer {
-    padding: 0 20px;
-}
-
 
 /***************************************************************
 *
@@ -1160,13 +859,9 @@ body {
     background: #00a4d6;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+::-webkit-scrollbar-corner {
+    
 }
-
-::-webkit-scrollbar-corner {}
 
 /***************************************************************
 *

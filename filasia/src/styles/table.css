@@ -59,8 +59,6 @@
     /* IDK WHY ACTION CELL IS NOT INCLUDED */
     background-color: #E1E1E1;
     text-align: center;
-
-    width: max-content;
 }
 
 .status {
@@ -208,7 +206,6 @@
     background-color: #E1E1E1;
     text-align: center;
     text-decoration: underline;
-    
 }
 
 .td-material-description {
@@ -291,27 +288,6 @@
     background-color: #E1E1E1;
     text-align: center;
 }
-
-.td-remaining{
-    background-color: #E1E1E1;
-    text-align: center;
-}
-
-.td-release{
-
-    text-align: center;
-}
-
-.td-release-no{
-    width: 100px;
-    text-align: center;
-}
-
-.td-released{
-    background-color: #E1E1E1;
-    text-align: center;
-}
-
 
 .td-cost {
     background-color: #E1E1E1;

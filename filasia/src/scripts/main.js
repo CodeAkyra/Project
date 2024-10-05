@@ -25,9 +25,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    /** FOR DROPDOWN LINKS */
+    /* HINDI GUMAGANA BUTTONS KAPAG NAKA ACTIVATE YUNG SCRIPT NA TOH
+
+    document.querySelectorAll('.dropdown-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = link.getAttribute('href');
+            if (url === "#") {
+                const contentId = link.getAttribute('data-content');
+                fetch(`${contentId}.html`)
+                    .then(response => response.text())
+                    .then(html => {
+                        content.innerHTML = html;
+                    })
+                    .catch(err => console.error('Error loading content:', err));
+            } else {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(html => {
+                        content.innerHTML = html;
+                    })
+                    .catch(err => console.error('Error loading content:', err));
+            }
+        });
+    });
+    
+    */
+
+    /** FOR MODULE LINKS */
+    /*
+    document.querySelectorAll('.module-name').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const contentId = button.getAttribute('data-content');
+            fetch(`${contentId}.html`)
+                .then(response => response.text())
+                .then(html => {
+                    const content = document.getElementById('main-content');
+                    content.innerHTML = html;
+                })
+                .catch(err => console.error('Error loading content:', err));
+        });
+    });
+    */
+
+
 });
 
-/* Load Create Request for request-material.html
+/* Load Create Request for request-material.html*/
 
 function loadCreateRequest() {
     fetch('production/Forms/create-request-material.html')
@@ -55,4 +102,3 @@ function loadEditRequetMaterialButton() {
         })
         .catch(err => console.error('Error loading content:', err));
 }
-        */
