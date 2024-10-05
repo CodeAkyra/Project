@@ -47,9 +47,9 @@
                 <span class="arrow">&#9660;</span>
             </button>
             <div class="dropdown" style="display: none;">
-                <button class="dropdown-link" onclick="loadPHP('../main/purchasing/purchase-order.php')">Purchase Order</button>
-                <button class="dropdown-link" onclick="loadPHP('../main/purchasing/requested-material.php')">Requested Material</button>
-                <button class="dropdown-link" onclick="loadPHP('../main/purchasing/requested-purchase.php')">Requested Purchase</button>
+                <button class="dropdown-link" onclick="loadPHP('purchasing/purchase-order.php')">Purchase Order</button>
+                <button class="dropdown-link" onclick="loadPHP('purchasing/requested-material.php')">Requested Material</button>
+                <button class="dropdown-link" onclick="loadPHP('purchasing/requested-purchase.php')">Requested Purchase</button>
             </div>
         </div>
 
@@ -60,7 +60,7 @@
                 <span class="arrow">&#9660;</span>
             </button>
             <div class="dropdown" style="display: none;">
-                <button class="dropdown-link" onclick="loadPHP('../main/Installation/installation-request-material.php')">Request Material</button>
+                <button class="dropdown-link" onclick="loadPHP('installation/installation-request-material.php')">Request Material</button>
             </div>
         </div>
 
