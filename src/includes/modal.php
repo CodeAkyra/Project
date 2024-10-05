@@ -1,3 +1,30 @@
+<!-- SET QUANTITY LEVEL MODAL -->
+<div id="set-quantity-level-modal" class="modal">
+    <div class="text-font set-quantity-container">
+        <div class="set-quantity-header">
+            <span class="set-quantity-title"></span>
+            <span class="close">&times;</span>
+        </div>
+        <div class="set-quantity-content">
+            <span>Quantity:</span>
+            <input class="input setQuantityLevel" type="number" placeholder="0">
+        </div>
+        <div class="set-quantity-button">
+            <button class="button-modal set-quantity">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<!-- SUCCESS NOTIFICATION -->
+<div id="notification-success-modal" class="modal">
+    <div class="notification-success-content">
+        <label class="checkmark-logo">&#9989;</label>
+        <span class="success-text">SUCCESS &#128077;</span>
+        <span class="desc-text">Click continue to move to the next step.</span>
+        <button class="continue-button">CONTINUE</button>
+    </div>
+</div>
+
 <!-- CREATE CLIENT MODAL -->
 <!-- CREATE CLIENT MODAL -->
 <!-- CREATE CLIENT MODAL -->
@@ -213,34 +240,6 @@
                         onclick="parent.postMessage('openSupplierModule','*')">Save Changes</button>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- SUCCESS NOTIFICATION -->
-<div id="notification-success-modal" class="modal">
-    <div class="notification-success-content">
-        <label class="checkmark-logo">&#9989;</label>
-        <span class="success-text">SUCCESS &#128077;</span>
-        <span class="desc-text">Click continue to move to the next step.</span>
-        <button class="continue-button">CONTINUE</button>
-    </div>
-</div>
-
-<!-- SET QUANTITY LEVEL MODAL -->
-<div id="set-quantity-level-modal" class="modal">
-    <div class="text-font set-quantity-container">
-        <div class="set-quantity-header">
-            <span class="set-quantity-title"></span>
-            <span class="close">&times;</span>
-        </div>
-        <div class="set-quantity-content">
-            <span>Quantity:</span>
-            <input class="input setQuantityLevel" type="number" placeholder="0">
-        </div>
-        <div class="set-quantity-button">
-            <button class="button-modal set-quantity">Confirm</button>
         </div>
     </div>
 </div>

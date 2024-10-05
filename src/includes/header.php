@@ -21,5 +21,5 @@
 
         <?php include('includes/sidebar.php'); ?>
 
-        <div id="layoutSidebar_content" style="margin: 20px; flex-grow: 1; background-color: gray;">
+        <div id="layoutSidebar_content" style="margin: 20px; flex-grow: 1; background-color: none;">
             <main>

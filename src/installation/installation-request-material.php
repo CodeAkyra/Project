@@ -16,7 +16,7 @@
     <!-- HEADER -->
     <div class="header">
         <h1 class="header-title">Installation > Request Materials</h1>
-        <button class="btn-create" id="install-create-request-btn">+ Create Request</button>
+        <button class="btn-create" id="install-create-request-btn" onclick="parent.postMessage('installation-openCreateRequest','*')">+ Create Request</button>
     </div>
 
     <div class="module-content">
@@ -64,7 +64,7 @@
                         <td class="td-style">Pizarra</td>
                         <td class="td-feedback">Icon</td>
                         <td class="td-action">
-                            <button class="edit-button installRequest-editAction"><i
+                            <button class="edit-button installRequest-editAction" onclick="parent.postMessage('installRequest-editAction','*')"><i
                                     class="btnEdit fa-solid fa-pen-to-square"></i></button>
                             <button class="delete-button" onclick="actionDelete()"><i
                                     class="btnDelete fa-solid fa-trash"></i></button>
@@ -133,28 +133,6 @@
             </div>
         </div>
     </div>
-
-
-
-    <script>
-        // Instalaltion Create Request Button
-        document.getElementById('install-create-request-btn').addEventListener('click', function () {
-            parent.postMessage('installation-openCreateRequest', '*');
-        });
-    </script>
-
-    <script>
-        // EDIT
-        var editButtons = document.getElementsByClassName('installRequest-editAction');
-        for (var i = 0; i < editButtons.length; i++) {
-            editButtons[i].addEventListener('click', function () {
-                parent.postMessage('installRequest-editAction', '*');
-            });
-        }
-    </script>
-
-    <script src="/src/scripts/modal.js"></script>
-    <script src="/src/scripts/function.js"></script>
 </body>
 
 </html>

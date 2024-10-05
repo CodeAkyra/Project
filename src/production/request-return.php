@@ -67,7 +67,7 @@
                             <td class="td-req-by">Bautista</td>
                             <td class="td-feedback">Icon</td>
                             <td class="td-action">
-                                <button class="edit-button update-exc-pending-button"><i
+                                <button class="edit-button update-exc-pending-button" onclick="parent.postMessage('updateExcPending','*')"><i
                                         class="btnEdit fa-solid fa-pen-to-square"></i></button>
                                 <button class="delete-button" onclick="actionDelete()"><i
                                         class="btnDelete fa-solid fa-trash"></i></button>
@@ -90,7 +90,7 @@
                             <td class="td-req-by">Bautista</td>
                             <td class="td-feedback">Icon</td>
                             <td class="td-action">
-                                <button class="view-button view-inprocess-exc-button"><i class="btnView fa-solid fa-eye"></i></i></button>
+                                <button class="view-button view-inprocess-exc-button" onclick="parent.postMessage('viewInProcessExc','*')"><i class="btnView fa-solid fa-eye"></i></i></button>
                             </td>
                         </tr>
 
@@ -110,7 +110,7 @@
                             <td class="td-req-by">Bautista</td>
                             <td class="td-feedback">Icon</td>
                             <td class="td-action">
-                                <button class="view-button view-complete-exc-button"><i class="btnView fa-solid fa-eye"></i></i></button>
+                                <button class="view-button view-complete-exc-button" onclick="parent.postMessage('viewCompleteExc','*')"><i class="btnView fa-solid fa-eye"></i></i></button>
                             </td>
                         </tr>
                     </tbody>
@@ -141,25 +141,6 @@
             </div>
         </div>
     </div>
-    <script src="../../scripts/function.js"></script>
-
-
-    <script>
-        function bindButtonClick(buttonClass, message) {
-            var buttons = document.getElementsByClassName(buttonClass);
-            for (var i = 0; i < buttons.length; i++) {
-                buttons[i].addEventListener('click', function () {
-                    parent.postMessage(message, '*');
-                });
-            }
-        }
-        bindButtonClick('update-def-pending-button', 'updateDefPending');
-        bindButtonClick('update-exc-pending-button', 'updateExcPending');
-        bindButtonClick('view-inprocess-def-button', 'viewInProcessDef');
-        bindButtonClick('view-inprocess-exc-button', 'viewInProcessExc');
-        bindButtonClick('view-complete-def-button', 'viewCompleteDef');
-        bindButtonClick('view-complete-exc-button', 'viewCompleteExc');
-    </script>
 
 </body>
 

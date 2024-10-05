@@ -7,7 +7,7 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -17,6 +17,14 @@
     background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
+}
+
+#unlabeled-materials-modal {
+    z-index: 200;
+}
+
+#set-quantity-level-modal {
+    z-index: 300;
 }
 
 .cr-modal-content {
