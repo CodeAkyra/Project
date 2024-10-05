@@ -20,7 +20,7 @@
                 <span class="arrow">&#9660;</span>
             </button>
             <div class="dropdown" style="display: none;">
-                <button class="dropdown-link" onclick="loadPHP('inventory/view-record.php')">Inventory Master Data</button>
+                <button class="dropdown-link" onclick="loadPHP('inventory/inventory-master-data.php')">Inventory Master Data</button>
                 <button class="dropdown-link" onclick="loadPHP('inventory/deliveries.php')">Deliveries</button>
                 <button class="dropdown-link" onclick="loadPHP('inventory/release-materials.php')">Release Materials</button>
                 <button class="dropdown-link" onclick="loadPHP('inventory/excess-materials.php')">Excess Materials</button>

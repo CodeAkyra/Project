@@ -216,3 +216,14 @@
         </div>
     </div>
 </div>
+
+
+<!-- SUCCESS NOTIFICATION -->
+<div id="notification-success-modal" class="modal">
+    <div class="notification-success-content">
+        <label class="checkmark-logo">&#9989;</label>
+        <span class="success-text">SUCCESS &#128077;</span>
+        <span class="desc-text">Click continue to move to the next step.</span>
+        <button class="continue-button">CONTINUE</button>
+    </div>
+</div>

@@ -139,7 +139,28 @@
     })();
 </script>
 
+<script>
+    // NOTIFICATION SUCCESS MODAL
+    (function() {
+        var notificationSuccessModal = document.getElementById("notification-success-modal");
+        var closeBtn = notificationSuccessModal.querySelector(".continue-button");
 
+        function openNotificationSuccessModal() {
+            notificationSuccessModal.style.display = "flex";
+        }
+
+        function closeNotificationSuccessModal() {
+            notificationSuccessModal.style.display = "none";
+        }
+
+        closeBtn.onclick = function() {
+            closeNotificationSuccessModal();
+        };
+
+        window.openNotificationSuccessModal = openNotificationSuccessModal;
+        window.closeNotificationSuccessModal = closeNotificationSuccessModal;
+    })();
+</script>
 
 
 
@@ -179,6 +200,11 @@
 
             case 'openEditSupplierModal':
                 openModal('edit-supplier-modal'); // OPEN EDIT SUPPLIER MODAL
+                break;
+
+                // NOTIFICATION SUCCESS
+            case 'notificationSuccess':
+                openNotificationSuccessModal(); // Notification Successful
                 break;
 
         }
