@@ -17,7 +17,7 @@
     <div class="header">
         <h1 class="header-title">Purchasing > Requested Purchase > Pending</h1>
         <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
-        <button class="button" id="markAsCompleteBtn" onclick="parent.postMessage('notificationSuccess','*')">Mark as Complete</button>
+        <button class="button" id="markAsCompleteBtn" onclick="alert('Masked as Completed!');parent.postMessage('purchasing-completeRequestedPurchase','*')">Mark as Complete</button>
     </div>
 
     <div class="blue-bar">
@@ -47,13 +47,6 @@
         // Cancel Button
         document.getElementById('cancelrequestBtn').addEventListener('click', function () {
             parent.postMessage('cancelRequestedPurchase', '*');
-        });
-    </script>
-
-    <script>
-        // Mark as Complete
-        document.getElementById('markAsCompleteBtn').addEventListener('click', function () {
-            parent.postMessage('purchasing-completeRequestedPurchase', '*');
         });
     </script>
 </body>

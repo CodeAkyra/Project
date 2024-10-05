@@ -17,9 +17,9 @@
 
     <div class="header">
         <h1 class="header-title">Purchasing > Purchase Order > Create Purchase</h1>
-        <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
+        <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('purchasing-viewPurchaseOrder','*');">Cancel</button>
         <button class="btn-create" id="save-create-request"
-            onclick="parent.postMessage('notificationSuccess','*');">Save and Request</button>
+            onclick="alert('Create Purchase Order Successfully!'); parent.postMessage('purchasing-viewPurchaseOrder','*');">Save and Request</button>
     </div>
 
     <div class="blue-bar">

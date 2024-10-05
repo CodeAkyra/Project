@@ -16,7 +16,7 @@
 
     <div class="header">
         <h1 class="header-title">Purchasing > Requested Purchase > View</h1>
-        <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
+        <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('cancelRequestedPurchase', '*')">Cancel</button>
     </div>
 
     <div class="blue-bar">
@@ -41,13 +41,6 @@
         </table>
     </div>
     </div>
-
-    <script>
-        // Cancel Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('cancelRequestedPurchase', '*');
-        });
-    </script>
 </body>
 
 </html>

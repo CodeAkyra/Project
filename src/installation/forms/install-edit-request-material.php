@@ -17,8 +17,8 @@
     <!-- HEADER -->
     <div class="header">
         <h1 class="header-title">Production > Request Material > Edit Request Materials</h1>
-        <button class="btn-cancel" id="cancelrequestBtn">Discard Changes</button>
-        <button class="btn-create" id="saverequestBtn" onclick="parent.postMessage('notificationSuccess', '*')">Save Changes</button>
+        <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('installRequest-cancelAction', '*')">Discard Changes</button>
+        <button class="btn-create" id="saverequestBtn" onclick="alert('Edit Successfully!');parent.postMessage('installCreateRequest-saveAction', '*')">Save Changes</button>
     </div>
 
     <div class="blue-bar">
@@ -140,22 +140,13 @@
             </table>
         </div>
     </div>
-    
-    <script>
-        // Discard Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('installRequest-cancelAction', '*');
-        });
-    </script>
 
     <script>
         // Save Changes
         document.getElementById('saverequestBtn').addEventListener('click', function () {
-            parent.postMessage('installCreateRequest-saveAction', '*');
+            ;
         });
     </script>
-
-    <script src="/src/scripts/function.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@
         <h1 class="header-title">Purchasing > Purchase Order > Create PO</h1>
         <div class="button-container">
             <button class="btn-cancel" onclick="parent.postMessage('purchasing-cancelCreatePO','*')">Cancel</button>
-            <button class="btn-create" id="createPO" onclick="parent.postMessage('notificationSuccess','*')">Save and
+            <button class="btn-create" id="createPO" onclick="alert('Create Purchase Order Successfully!'); parent.postMessage('purchasing-viewPurchaseOrder','*');">Save and
                 Confirm</button>
         </div>
     </div>

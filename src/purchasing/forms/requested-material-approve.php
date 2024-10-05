@@ -15,7 +15,7 @@
         <h1 class="header-title">Purchasing > Requested Material > Approval</h1>
         <button class="button btn-cancel" onclick="parent.postMessage('purchasing-backApprove','*')">Back</button>
         <button class="button green" id="approve-requestMaterial"
-            onclick="parent.postMessage('notificationSuccess','*')">Approve</button>
+            onclick="alert('Requested Material Approved!');parent.postMessage('approve-requestMaterial','*')">Approve</button>
     </div>
 
     <div class="blue-bar">
@@ -122,15 +122,6 @@
             </div>
         </div>
     </div>
-
-
-    <script>
-        // APPROVE
-        document.getElementById('approve-requestMaterial').addEventListener('click', function () {
-            parent.postMessage('approve-requestMaterial', '*');
-        });
-    </script>
-
 </body>
 
 </html>

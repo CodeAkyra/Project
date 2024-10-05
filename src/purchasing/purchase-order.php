@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="../../styles/tables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <title>Purchase Order</title>
 </head>
@@ -57,7 +55,7 @@
                             <td class="td-req-by">Bautista</td>
                             <td class="td-approved-by">Bautista</td>
                             <td class="td-action">
-                                <button class="edit-button" onclick="parent.postMessage('purchasing-editPurchaseOrder','*')"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
+                                <button class="edit-button" onclick="parent.postMessage('purchasing-editPurchaserOrder','*')"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
                                 <button class="delete-button" onclick="actionDelete()"><i
                                         class="btnDelete fa-solid fa-trash"></i></button>
                             </td>

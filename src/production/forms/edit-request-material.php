@@ -4,11 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edit Request Return</title>
-
-    <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -16,8 +11,8 @@
 
     <div class="header">
         <h1 class="header-title">Production > Request Material > Edit Request Details</h1>
-        <button class="btn-cancel" id="discardeditBtn">Discard Changes</button>
-        <button class="btn-create" id="save-create-request" onclick="parent.postMessage('notificationSuccess','*');">Save Changes</button>
+        <button class="btn-cancel" id="discardeditBtn" onclick="parent.postMessage('requestMaterial-discardEditAction', '*')">Discard Changes</button>
+        <button class="btn-create" id="save-create-request" onclick="alert('Edit Successfully!');parent.postMessage('productionCreateRequest-saveAction', '*')">Save Changes</button>
     </div>
 
     <div class="blue-bar">
@@ -139,27 +134,5 @@
             </table>
         </div>
     </div>
-
-    <script>
-        // Discard Button
-        document.getElementById('discardeditBtn').addEventListener('click', function () {
-            parent.postMessage('requestMaterial-discardEditAction', '*');
-        });
-    </script>
-
-    <script>
-        document.getElementById('save-create-request').addEventListener('click', function () {
-            parent.postMessage('productionCreateRequest-saveAction', '*');
-        })
-    </script>
-
 </body>
-
 </html>
-
-<!-- Para toh sa edit ni request material which is hindi na gagamit sa ngayon kasi hindi ko pa naaayos yung buttons para ma display toh -->
-
-<!-- Gusto ko i polish toh, pero siguro next time na -->
-<!-- Gusto ko i polish toh, pero siguro next time na -->
-<!-- Gusto ko i polish toh, pero siguro next time na -->
-<!-- Gusto ko i polish toh, pero siguro next time na -->

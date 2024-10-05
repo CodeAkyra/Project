@@ -5,11 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Excess</title>
-
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -17,9 +12,9 @@
     <div class="header">
         <h1 class="header-title">Request Return : Excess > Update Details</h1>
         <div class="button-container">
-            <button class="btn-cancel" id="discard-Btn">Discard Changes</button>
+            <button class="btn-cancel" id="discard-Btn" onclick="parent.postMessage('returnRequest-discardAction', '*')">Discard Changes</button>
             <button class="btn-create" id="save-update-excessBtn"
-                onclick="parent.postMessage('notificationSuccess','*');">Save Changes</button>
+                onclick="alert('Edit Successfully!');parent.postMessage('productionCreateReturn-saveAction', '*')">Save Changes</button>
         </div>
     </div>
 
@@ -143,7 +138,7 @@
                             <td class="td-supplier">Supplier_Name</td>
                             <td class="td-return-qty">10</td>
                             <td class="td-action">
-                                <button class="edit-button" onclick="actionEdit()"><i
+                                <button class="edit-button" onclick="parent.postMessage('setQuantity-actionBtn','*')"><i
                                         class="btnEdit fa-solid fa-pen-to-square"></i></button>
                                 <button class="delete-button" onclick="actionDelete()"><i
                                         class="btnDelete fa-solid fa-trash"></i></button>
@@ -154,19 +149,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Discard Button
-        document.getElementById('discard-Btn').addEventListener('click', function () {
-            parent.postMessage('returnRequest-discardAction', '*');
-        });
-    </script>
-
-    <script>
-        document.getElementById('save-update-excessBtn').addEventListener('click', function () {
-            parent.postMessage('productionCreateReturn-saveAction', '*');
-        })
-    </script>
 </body>
 
 </html>

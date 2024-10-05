@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <title>View Batch</title>
+    <title>View Batch Completed</title>
 </head>
 
 <body class="body-iframe-padding">
     <div class="header">
         <h1 class="header-title">View Batch</h1>
         <div class="header-buttons">
-            <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('viewBatch-cancelAction', '*')">Back</button>
+            <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('inventory-viewReleasedMaterials', '*')">Back</button>
         </div>
     </div>
 

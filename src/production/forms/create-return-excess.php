@@ -4,11 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <title>Return Excess</title>
 </head>
@@ -18,9 +13,9 @@
         <h1 class="header-title">Production > Request Return > Excess</h1>
         <div class="header-buttons">
             <button class="btn-qr" id="qrBtn"><i class="fas fa-qrcode qr-font"> <input type="file" accept="image/*" capture="capture"></i></button>
-            <button class="btn-cancel" id="cancelreturnBtn">Cancel</button>
+            <button class="btn-cancel" id="cancelreturnBtn" onclick="parent.postMessage('returnRequest-cancelAction', '*')">Cancel</button>
             <button class="btn-create" id="save-return-excessBtn"
-                onclick="parent.postMessage('notificationSuccess','*');">Save and Request</button>
+                onclick="alert('Create Return Successfully!'); parent.postMessage('productionCreateReturn-saveAction', '*')">Save and Request</button>
         </div>
     </div>
 
@@ -152,87 +147,16 @@
                         <td class="td-supplier">Supplier_Name</td>
                         <td class="td-return-qty">10</td>
                         <td class="td-action">
-                            <button class="edit-button update-exc-pending-button"><i
+                            <button class="edit-button update-exc-pending-button" onclick="parent.postMessage('setQuantity-actionBtn','*')"><i
                                     class="btnEdit fa-solid fa-pen-to-square"></i></button>
                             <button class="delete-button" onclick="actionDelete()"><i
                                     class="btnDelete fa-solid fa-trash"></i></button>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="td-cat">Consumables / Hardware</td>
-                        <td class="td-mat-desc">Material 1</td>
-                        <td class="td-unit">PC/S</td>
-                        <td class="td-supplier">Supplier_Name</td>
-                        <td class="td-return-qty">10</td>
-                        <td class="td-action">
-                            <button class="edit-button update-exc-pending-button"><i
-                                    class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td-cat">Consumables / Hardware</td>
-                        <td class="td-mat-desc">Material 1</td>
-                        <td class="td-unit">PC/S</td>
-                        <td class="td-supplier">Supplier_Name</td>
-                        <td class="td-return-qty">10</td>
-                        <td class="td-action">
-                            <button class="edit-button update-exc-pending-button"><i
-                                    class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td-cat">Consumables / Hardware</td>
-                        <td class="td-mat-desc">Material 1</td>
-                        <td class="td-unit">PC/S</td>
-                        <td class="td-supplier">Supplier_Name</td>
-                        <td class="td-return-qty">10</td>
-                        <td class="td-action">
-                            <button class="edit-button update-exc-pending-button"><i
-                                    class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="td-cat">Consumables / Hardware</td>
-                        <td class="td-mat-desc">Material 1</td>
-                        <td class="td-unit">PC/S</td>
-                        <td class="td-supplier">Supplier_Name</td>
-                        <td class="td-return-qty">10</td>
-                        <td class="td-action">
-                            <button class="edit-button update-exc-pending-button"><i
-                                    class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
-
-
                 </tbody>
             </table>
         </div>
     </div>
-    <script>
-        // Cancel Button
-        document.getElementById('cancelreturnBtn').addEventListener('click', function () {
-            parent.postMessage('returnRequest-cancelAction', '*');
-        });
-    </script>
-
-    <script>
-        document.getElementById('save-return-excessBtn').addEventListener('click', function () {
-            parent.postMessage('productionCreateReturn-saveAction', '*');
-        })
-    </script>
-
-    <script src="/src/scripts/getLocalTime.js"></script>
 </body>
 
 </html>
-
-
-<!-- Dito lahat ng content for Create Excess Return -->

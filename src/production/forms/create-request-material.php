@@ -4,11 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Request Return</title>
-
-    <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -16,9 +11,9 @@
 
     <div class="header">
         <h1 class="header-title">Production > Request Material > Create Request</h1>
-        <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
+        <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('requestMaterial-cancelAction', '*');">Cancel</button>
         <button class="btn-create" id="save-create-request"
-            onclick="parent.postMessage('notificationSuccess','*');">Save and Request</button>
+            onclick="alert('Create Request Successfully!');parent.postMessage('productionCreateRequest-saveAction', '*')">Save and Request</button>
     </div>
 
     <div class="blue-bar">
@@ -129,7 +124,7 @@
                         <td class="td-quantity">100</td>
                         <td class="td-available-quantity">500</td>
                         <td class="td-action">
-                            <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
+                            <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square" onclick="parent.postMessage('setQuantity-actionBtn','*')"></i></button>
                             <button class="delete-button" onclick="actionDelete()"><i
                                     class="btnDelete fa-solid fa-trash"></i></button>
                         </td>
@@ -138,21 +133,6 @@
             </table>
         </div>
     </div>
-
-    <script>
-        // Cancel Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('requestMaterial-cancelAction', '*');
-        });
-    </script>
-
-    <script>
-        document.getElementById('save-create-request').addEventListener('click', function () {
-            parent.postMessage('productionCreateRequest-saveAction', '*');
-        })
-    </script>
-
-    <script src="/src/scripts/getLocalTime.js"></script>
 </body>
 
 </html>

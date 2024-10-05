@@ -4,11 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Request Purchase</title>
-
-    <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -16,9 +11,9 @@
 
     <div class="header">
         <h1 class="header-title">Inventory > Request Purchase > Create Request Purchase</h1>
-        <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
+        <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('createRequestPurchase-cancelAction', '*')">Cancel</button>
         <button class="btn-create" id="save-create-request"
-            onclick="parent.postMessage('notificationSuccess','*');">Save and Request</button>
+            onclick="alert('Purchase Requested Successfully!');parent.postMessage('inventoryCreateRequestPurchase-saveAction', '*')">Save and Request</button>
     </div>
 
     <div class="blue-bar">
@@ -91,19 +86,6 @@
             </table>
         </div>
     </div>
-
-    <script>
-        // Cancel Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('createRequestPurchase-cancelAction', '*');
-        });
-    </script>
-
-    <script>
-        document.getElementById('save-create-request').addEventListener('click', function () {
-            parent.postMessage('inventoryCreateRequestPurchase-saveAction', '*');
-        })
-    </script>
 </body>
 
 </html>

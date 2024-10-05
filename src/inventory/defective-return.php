@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request Material</title>
-
-    <link rel="stylesheet" href="../production/Forms/create-request-return.css"> <!-- Wala na toh noh? -->
-    <link rel="stylesheet" href="../../styles/main.css">
-
-    <link rel="stylesheet" href="../../styles/tables.css">
-    <link rel="stylesheet" href="../../styles/tables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -63,7 +57,7 @@
                             <td class="td-remarks">Icon</td>
                             <td class="td-action">
                                 <!-- nalimot ko yung para dito, maya q ayusin -->
-                                <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
+                                <button class="edit-button" onclick="parent.postMessage('edit-requestBtn', '*')"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
                         </tr>
 
                         <tr>
@@ -112,26 +106,6 @@
 
     <script src="../../scripts/function.js"></script>
 
-    <script>
-        // Create Request Button
-        document.getElementById('create-requestBtn').addEventListener('click', function () {
-            parent.postMessage('openCreateRequest', '*');
-        });
-    </script>
-
-    <script>
-        // Select all elements with the class 'edit-button'
-        var editButtons = document.getElementsByClassName('edit-button');
-
-        // Loop through each button and add an event listener
-        for (var i = 0; i < editButtons.length; i++) {
-            editButtons[i].addEventListener('click', function () {
-                // Send a message to the parent iframe to open the edit request form
-                parent.postMessage('edit-requestBtn', '*');
-            });
-        }
-
-    </script>
     <!-- Btw, if mag insert tayo ng mga codes siguro ni gpt, wag muna delete yung mga comments para mas ma gets natin kung paano nag wowork -->
 </body>
 

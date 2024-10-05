@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="/src/styles/main.css">
     <title>Start Release</title>
 </head>
 
@@ -13,8 +11,8 @@
     <div class="header">
         <h1 class="header-title">Inventory > Release Material > View Released</h1>
         <div class="header-buttons">
-            <button class="btn-cancel" id="cancelrequestBtn">Back</button>
-            <button class="btn-create" id="view-batch">View Batch</button>
+            <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('releaseMaterials-cancelAction', '*')">Back</button>
+            <button class="btn-create" id="view-batch" onclick="parent.postMessage('inventoryViewBatchCompleted-viewAction', '*')">View Batch</button>
         </div>
     </div>
 
@@ -82,19 +80,6 @@
         </div>
     </div>
     </div>
-
-    <script>
-        // Cancel Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('releaseMaterials-cancelAction', '*');
-        });
-    </script>
-
-    <script>
-        document.getElementById('view-batch').addEventListener('click', function () {
-            parent.postMessage('inventoryViewBatch-viewAction', '*');
-        })
-    </script>
 </body>
 
 </html>

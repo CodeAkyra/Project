@@ -4,11 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edit Excess Material</title>
-
-    <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -20,11 +15,11 @@
 
             <!-- MAKALAT PA YUNG GAP AND SPACING NG MGA BUTTONS DITO -->
 
-            <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
+            <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('excessMaterial-cancelAction', '*')">Cancel</button>
             <button class="view-image-button" id="">View Image</button>
             <button class="btn-qr" id=""><i class="fa-solid fa-qrcode"></i></button>
             <button class="btn-finish-receiving" id="finish-receiving"
-                onclick="parent.postMessage('notificationSuccess','*');">Finish Receiving</button>
+                onclick="alert('Excess Material Received!');parent.postMessage('inventory-excessMaterial-saveAction', '*')">Finish Receiving</button>
 
 
         </div>
@@ -59,37 +54,12 @@
                     <td class="td-action">
                         <button class="check-button" onclick="parent.postMessage('setQuantity-actionBtn','*')"><i class="btnCheck fa-solid fa-check"></i></button>
                         <button class="x-button"><i class="btnX fa-solid fa-x"></i></button> <!-- FEEL KO DI RIN MAGAGAMIT TOH? -->
-
-                        <!--
-                        <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                        <button class="delete-button" onclick="actionDelete()"><i
-                                class="btnDelete fa-solid fa-trash"></i></button>
-                                -->
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
     </div>
-
-    <script>
-        // Cancel Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('excessMaterial-cancelAction', '*');
-        });
-    </script>
-
-    <script>
-        document.getElementById('save-create-request').addEventListener('click', function () {
-            parent.postMessage('inventory-excessMaterial-saveAction', '*');
-        })
-    </script>
-
-    <script>
-        document.getElementById('finish-receiving').addEventListener('click', function () {
-            parent.postMessage('inventory-excessMaterial-saveAction', '*');
-        })
-    </script>
 </body>
 
 </html>

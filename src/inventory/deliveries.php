@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deliveries</title>
-
-    <link rel="stylesheet" href="../production/Forms/create-request-return.css"> <!-- Wala na toh noh? -->
-    <link rel="stylesheet" href="../../styles/main.css">
-
-    <link rel="stylesheet" href="../../styles/tables.css">
-    <link rel="stylesheet" href="../../styles/tables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -124,13 +118,6 @@
 
 
     <script src="../../scripts/function.js"></script>
-
-    <script>
-        // Create Request Button
-        document.getElementById('create-requestBtn').addEventListener('click', function () {
-            parent.postMessage('openCreateRequest', '*');
-        });
-    </script>
     <!-- Btw, if mag insert tayo ng mga codes siguro ni gpt, wag muna delete yung mga comments para mas ma gets natin kung paano nag wowork -->
 </body>
 

@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Completed Excess</title>
-
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
 <body class="body-iframe-padding">
     <div class="header">
         <h1 class="header-title">Request Return : Excess > View Complete</h1>
-        <button class="btn-return" id="returnBtn">Return</button>
+        <button class="btn-return" id="returnBtn" onclick="parent.postMessage('returnRequest-returnAction', '*')">Return</button>
     </div>
 
     <div class="module-content">
@@ -88,13 +84,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Return Button
-        document.getElementById('returnBtn').addEventListener('click', function () {
-            parent.postMessage('returnRequest-returnAction', '*');
-        });
-    </script>
 </body>
 
 </html>

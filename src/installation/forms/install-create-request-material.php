@@ -17,8 +17,8 @@
     <!-- HEADER -->
     <div class="header">
         <h1 class="header-title">Installation > Request Material > Create Request</h1>
-        <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
-        <button class="btn-create" id="saverequestBtn" onclick="parent.postMessage('notificationSuccess', '*')">Save Changes</button>
+        <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('installRequest-cancelAction', '*')">Cancel</button>
+        <button class="btn-create" id="saverequestBtn" onclick="alert('Create Request Material Successfully!');parent.postMessage('installCreateRequest-saveAction', '*')">Save Changes</button>
     </div>
 
     <div class="blue-bar">
@@ -138,20 +138,6 @@
             </table>
         </div>
     </div>
-
-    <script>
-        // Cancel Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('installRequest-cancelAction', '*');
-        });
-    </script>
-
-    <script>
-        // Save Changes
-        document.getElementById('saverequestBtn').addEventListener('click', function () {
-            parent.postMessage('installCreateRequest-saveAction', '*');
-        });
-    </script>
 </body>
 
 </html>

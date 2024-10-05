@@ -4,11 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>View Request Purchase</title>
-
-    <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -16,7 +11,7 @@
 
     <div class="header">
         <h1 class="header-title">Inventory > Request Purchase > View Request Purchase</h1>
-        <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
+        <button class="btn-cancel" id="cancelrequestBtn" onclick="parent.postMessage('createRequestPurchase-cancelAction', '*')">Cancel</button>
     </div>
 
     <div class="blue-bar">
@@ -50,13 +45,6 @@
             </table>
         </div>
     </div>
-
-    <script>
-        // Cancel Button
-        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
-            parent.postMessage('createRequestPurchase-cancelAction', '*');
-        });
-    </script>
 </body>
 
 </html>
